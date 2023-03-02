@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Aula 10 - Ficheiros.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  FicheirosTextoC-Exercicio02_a.c
+C:\Temp\LP1\Codigo\Aulas\Aula - 15-12-2020 - Ficheiros\Aula 10 - Ficheiros\Aula 10 - Ficheiros\FicheirosTextoC-Exercicio02_a.c(55,16): warning C4013: 'getche' undefined; assuming extern returning int
+  FicheirosTextoC-Exercicio03.c
+C:\Temp\LP1\Codigo\Aulas\Aula - 15-12-2020 - Ficheiros\Aula 10 - Ficheiros\Aula 10 - Ficheiros\FicheirosTextoC-Exercicio03.c(57,8): warning C4013: 'getche' undefined; assuming extern returning int
+C:\Temp\LP1\Codigo\Aulas\Aula - 15-12-2020 - Ficheiros\Aula 10 - Ficheiros\Aula 10 - Ficheiros\FicheirosTextoC-Exercicio03.c(36,22): warning C4101: 'media': unreferenced local variable
+  Generating Code...
+  Aula 10 - Ficheiros.vcxproj -> C:\Temp\LP1\Codigo\Aulas\Aula - 15-12-2020 - Ficheiros\Aula 10 - Ficheiros\Debug\Aula - Ficheiros Texto.exe

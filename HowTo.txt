@@ -1,0 +1,17 @@
+
+Carregar material do Repositório
+
+
+1) git remote add origin https://github.com/luferIPCA/LEDJD-EDA-2022-2023.git
+2) git fetch
+3) git pull
+
+ou então
+
+4) git pull https://github.com/luferIPCA/LEDJD-EDA-2022-2023.git
+
+ou então
+
+5) Fazer cópia integrar de repositótio girt remoto
+	
+	git clone https://github.com/luferIPCA/LEDJD-EDA-2022-2023.git

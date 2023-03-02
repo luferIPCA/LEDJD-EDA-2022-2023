@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\MyLib\MyLib.vcxproj' does not exist.
+  Aula.c
+  UsaLib.vcxproj -> C:\Temp\LP1\Codigo\Aulas\x64\Debug\UsaLib.exe

@@ -1,0 +1,2 @@
+C:\Temp\LP1\Codigo\Aulas\Aula - 24-11-2020 - Libraries\Debug\MyLib.lib
+C:\Temp\Temp 20-21\LP1\Codigo\Aulas\Aula - 24-11-2020 - Libraries\Debug\MyLib.lib

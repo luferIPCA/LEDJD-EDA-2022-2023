@@ -1,0 +1,3 @@
+﻿  inscricao.c
+C:\Temp\LP1\Codigo\Aulas\Aula - 15-12-2020 - Ficheiros\Aula 11 - Ficheiros\Aula 11 - Ficheiros\inscricao.c(181,133): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+  Aula 11 - Ficheiros.vcxproj -> C:\Temp\LP1\Codigo\Aulas\Aula - 15-12-2020 - Ficheiros\Aula 11 - Ficheiros\x64\Debug\Aula 11 - Ficheiros.exe

@@ -1,0 +1,6 @@
+﻿  Arrays.c
+  Calculos.c
+  Programa.c
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 1\Programa.c(21,8): warning C4101: 'y': unreferenced local variable
+  Generating Code...
+  Aula 1.vcxproj -> D:\Temp\EDA-EDJD\Debug\Aula 1.exe
