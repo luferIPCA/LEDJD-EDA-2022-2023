@@ -26,9 +26,9 @@ typedef struct Jogo {
 
 
 int InsereJogo(Jogo *jogos[], Jogo j, int pos);
-int InsereJogoII(Jogo *jogos, Jogo *j, int pos);
-void MostraJogos(Jogo jogos[], int t);
-void MostraJogosII(Jogo* jogos[], int t);
+int InsereJogoII(Jogo* jogos[], Jogo* j, int pos);
+bool MostraJogos(Jogo jogos[], int t);
+bool MostraJogosII(Jogo* jogos[], int t);
 bool InicializaArray(Jogo* jogos[], int n);
 
 /*Verifica se determinado jogo existe*/

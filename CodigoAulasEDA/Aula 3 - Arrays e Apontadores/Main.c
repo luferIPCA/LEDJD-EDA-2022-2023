@@ -9,15 +9,17 @@ http://www.geeksforgeeks.org/sorting-algorithms/#Basic
 */
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "Dados.h"
 
 int main() {
 
 #pragma region Array_Structs
-	//Jogo jogos[MAX];
-	//jogos[0].cod = 12
-	//mostraJogos(jogos, 1);
-	
+	Jogo jogosI[MAX];
+	jogosI[0].cod = 12;
+	MostraJogos(jogosI, 1);
+
 	//Array de Jogos: Revisão
 	Jogo arrayJogos[MAX] = { { 12,"XXX",'T' } };
 	MostraJogos(arrayJogos, 1);
@@ -39,9 +41,10 @@ int main() {
 	numJogos = InsereJogo(jogos, j, numJogos);
 	numJogos = InsereJogo(jogos, arrayJogos[0], numJogos);
 	MostraJogosII(jogos, MAX);
-	/*
+	
 	numJogos = InsereJogoII(jogos, &j, numJogos);
-	*/
+	MostraJogosII(jogos, MAX);
+	
 #pragma endregion
 
 	return 1;

@@ -1,12 +1,13 @@
 /*
 * author: lufer
 * email: lufer@ipca.pt
-* date: 06.03.2022
 * desc: Aritmética de Apontadores
 */
 
-#pragma warning (disable: 4996)
+//#pragma warning (disable: 4996)
 #include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 #include "Dados.h"
 
 void main() {
@@ -14,7 +15,7 @@ void main() {
 #pragma region Aritmetica_Pointers
 
 	int x = 10, y = x * 2;
-	int *p = &x;
+	int* p = &x;
 
 	printf("&x = %p\n", &x);
 	printf("*p = %d\n", *p);
@@ -22,12 +23,52 @@ void main() {
 	//printf("*p++ = %d\n", *p++);	//CUIDADO
 	printf("++(*p) = %d\n", ++(*p));
 	printf("(*p)++ = %d\n", (*p)++);
-	printf("++*p = %d\n", ++*p);
+	printf("++*p = %d\n", ++ * p);
 
-	
+
 	printf("ChangeValor: %d\n", *changeValue(p));
-	printf("Maior valor entre %d e %d = %d\n", x,y, *Maior(&x,&y));
+	printf("Maior valor entre %d e %d = %d\n", x, y, *Maior(&x, &y));
 	//p = Maior(&x, &y);
+
+#pragma endregion
+
+	getche();			//wait until keypressed
+
+#pragma region Data
+
+	Data *d = (Data*)malloc(sizeof(Data));
+	//ou
+	//DataPtr d = (DataPtr)malloc(sizeof(Data));
+	if (d) {
+		d->ano = 12;
+		d->dia = 13;
+		d->ano = 2023;
+	}
+
+#pragma endregion
+
+#pragma region Point
+	Point z;
+	z.x = 200;
+	z.y = 2 * x;
+
+	Point* k = (Point*)malloc(sizeof(Point));
+	k->x = z.x;
+	k->y = z.y;
+	//equivalente a 
+	k = &z;
+	printf("x: %f - y: %f", k->x, k->y);
+
+#pragma endregion
+
+#pragma region MyObject
+
+	int* tmp = NULL;
+	MyObject* my1 = (MyObject*)malloc(sizeof(MyObject));
+
+	my1->valid = 12;
+	my1->data = tmp;
+	my1->size = sizeof tmp;
 
 #pragma endregion
 
@@ -39,6 +80,7 @@ void main() {
 	int* ptr;
 
 	ptr = valores;	//nome do array é o mesmo que &array[0]
+	//ou
 	//ptr = &valores[0]	
 	//*ptr == valores[0]
 
@@ -49,7 +91,7 @@ void main() {
 	//printf("p[1]=%d\n", *(ptr + 1));
 
 	for (int i = 0; i < 4; i++) {
-		printf("p[%d]=%d\n",i, *(ptr + i));
+		printf("p[%d]=%d\n", i, *(ptr + i));
 	}
 
 #pragma endregion
@@ -70,7 +112,7 @@ void main() {
 	q.idade = 12;
 	strcpy(q.nome, "Julio");
 
-	Pessoa *pq;
+	Pessoa* pq;
 	pq = &q;
 	//(*pq).idade = 12;
 	//ou
@@ -89,5 +131,5 @@ void main() {
 
 #pragma endregion
 
-	getche();			//keypressed
+	getche();			//wait until keypressed
 }

@@ -22,4 +22,23 @@ typedef struct Pessoa {
 	char nome[N];
 	struct Pessoa* primo;
 }Pessoa;
+
+typedef struct {
+	int valid;
+	int* data;
+	size_t size;
+} MyObject;
+
+typedef struct Data
+{
+	int dia;
+	char mes[10];
+	int ano;
+}Data, * DataPtr;
+
+typedef struct Point {
+	double x;
+	double y;
+}Point, * PointPtr;
+
 #endif  // !X

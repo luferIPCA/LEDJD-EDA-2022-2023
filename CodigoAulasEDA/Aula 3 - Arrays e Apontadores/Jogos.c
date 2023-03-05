@@ -8,26 +8,30 @@ http://www.geeksforgeeks.org/sorting-algorithms/#Basic
 */
 
 #include "Dados.h"
-
-
+#include <string.h>
+#include <stdlib.h>
 
 /*
 Auxiliar: apresenta toda a informação sobre cada jogo
 */
-void MostraJogos(Jogo jogos[], int t) {
+bool MostraJogos(Jogo jogos[], int t) {
+	if (t <= 0) return false;
 	for (int i = 0; i < t; i++) {
 			printf("Jogo= %d | Nome= %s | Ano: %d\n", jogos[i].cod, jogos[i].nome, jogos[i].data.ano);
 	}
+	return true;
 }
 
 /*
 Auxiliar: apresenta toda a informação sobre cada jogo
 */
-void MostraJogosII(Jogo *jogos[], int t) {
+bool MostraJogosII(Jogo *jogos[], int t) {
+	if (t <= 0) return false;
 	for (int i = 0; i < t; i++) {
 		if (jogos[i]!=NULL)
 		printf("Jogo= %d | Nome= %s | Ano: %d\n", jogos[i]->cod, jogos[i]->nome, jogos[i]->data.ano);
 	}
+	return true;
 }
 
 
@@ -44,31 +48,36 @@ bool InicializaArray(Jogo* jogos[], int n) {
 /*
 Insere novo jogo numa determinada posição
 Jogo passa por parâmetro
+Devolve o tamanho atual do array
 */
 int InsereJogo(Jogo* jogos[], Jogo j, int pos) {
-	//0º Verificar se o array tem capacidade e a posição é válida
+	//1º Verificar se o array tem capacidade e a posição é válida
 	if (pos < 0 || pos > MAX) return -1;
 
 	// Ver se o jogo já existe
-	if (ExisteJogo(jogos, j.cod, MAX) == true) return -1;
+	if (ExisteJogo(jogos, j.cod, MAX) == true) return -2;
 
-	//1º criar espaço em memoria para um jogo
+	//2º criar espaço em memoria para um jogo
 	jogos[pos] = (Jogo*) malloc(sizeof(Jogo));
-
-	//2ª coloco array a apontar para esse espaço
-	jogos[pos]->cod = j.cod;
-	strcpy(jogos[pos]->nome,j.nome);
-	jogos[pos]->data = j.data;
-	pos++;
+	if (jogos[pos]) {
+		//3º coloco array a apontar para esse espaço
+		(*jogos[pos]).cod = j.cod;
+		strcpy(jogos[pos]->nome, j.nome);
+		jogos[pos]->data = j.data;
+		pos++;
+	}
 	return pos;
 }
 
 /*
 Insere novo jogo.
 Endereço de jogo passa por parâmetro
+Devolve o tamanho atual do array
 */
 int InsereJogoII(Jogo* jogos[], Jogo *j, int pos) {
-	//ATENÇÃO: Verificar se jogo já existe
+	//ATENÇÃO: 
+	//Verificar se jogo já existe
+	//Verificar se existe espaço
 	jogos[pos] = j;
 	pos++;
 	return pos;

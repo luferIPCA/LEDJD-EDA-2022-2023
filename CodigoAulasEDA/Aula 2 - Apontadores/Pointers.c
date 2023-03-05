@@ -1,11 +1,11 @@
 /*
 * author: lufer
 * email: lufer@ipca.pt
-* date: 06.03.2022
 * desc: Apontadores
 */
 
 #include "Dados.h"
+
 
 int* changeValue(const int* p) {
 	//*p = *p + 1;		//não é permitido pois é const
