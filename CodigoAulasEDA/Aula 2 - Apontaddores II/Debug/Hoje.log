@@ -1,0 +1,12 @@
+﻿  Funcoes.c
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\Funcoes.c(31,37): warning C4028: formal parameter 2 different from declaration
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\Funcoes.c(48,24): warning C4013: 'malloc' undefined; assuming extern returning int
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\Funcoes.c(50,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+  GerePessoas.c
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\GerePessoas.c(18,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\GerePessoas.c(46,34): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\GerePessoas.c(46,28): warning C4024: 'InserePessoa': different types for formal and actual parameter 2
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\GerePessoas.c(48,24): warning C4013: 'InserePessoaII' undefined; assuming extern returning int
+  Generating Code...
+D:\Temp\EDA-ESI\CodigoAulasEDA\Hoje\Funcoes.c(57): warning C4716: 'Soma': must return a value
+  Hoje.vcxproj -> D:\Temp\EDA-ESI\Debug\Hoje.exe

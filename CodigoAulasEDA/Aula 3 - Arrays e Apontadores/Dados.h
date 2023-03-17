@@ -37,3 +37,11 @@ bool ExisteJogo(Jogo* jogos[], int cod, int n);
 
 Jogo* criaJogo(int cod, char* nome, char tipo);
 #endif //
+
+
+
+
+
+
+
+

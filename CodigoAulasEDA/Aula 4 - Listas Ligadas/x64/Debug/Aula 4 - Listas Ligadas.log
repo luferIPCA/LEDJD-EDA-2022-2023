@@ -1,0 +1,13 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Listas.c
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Listas.c(270,26): warning C4101: 'aux': unreferenced local variable
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Listas.c(288,26): warning C4101: 'aux': unreferenced local variable
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Listas.c(306,26): warning C4101: 'aux': unreferenced local variable
+  Main.c
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Main.c(60,20): warning C4013: 'ConsListRec' undefined; assuming extern returning int
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Main.c(60,30): warning C4047: '=': 'JogosListaPtr' differs in levels of indirection from 'int'
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Main.c(74,8): warning C4013: 'getche' undefined; assuming extern returning int
+  Generating Code...
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Listas.c(142): warning C4715: 'InsereJogoOrdenado': not all control paths return a value
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Listas.c(113): warning C4716: 'InsereJogoOrdenadoII': must return a value
+  Aula 4 - Listas Ligadas.vcxproj -> D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 4 - Listas Ligadas\Debug\Aula 4 - Listas Ligadas Simples.exe

@@ -1,0 +1,3 @@
+﻿  Source.c
+D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 3 - Arrays e Apontadores II\Source.c(29,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+  Aula 3 - Arrays e Apontadores II.vcxproj -> D:\Temp\EDA-EDJD\x64\Debug\Aula 3 - Arrays e Apontadores II.exe

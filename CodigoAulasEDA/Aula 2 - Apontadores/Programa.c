@@ -1,7 +1,9 @@
 /*
 * author: lufer
 * email: lufer@ipca.pt
-* desc: Aritmética de Apontadores
+* desc: 
+*	Aritmética de Apontadores
+*	Alocação dinâmica de memória
 */
 
 //#pragma warning (disable: 4996)

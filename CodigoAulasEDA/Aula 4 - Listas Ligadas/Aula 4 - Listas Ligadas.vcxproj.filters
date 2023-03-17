@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Listas.c" />
+    <ClCompile Include="Main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dados.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Dados">
+      <UniqueIdentifier>{4d56a24c-b615-4de0-ad4c-201550651851}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Jogos.csv">
+      <Filter>Dados</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
