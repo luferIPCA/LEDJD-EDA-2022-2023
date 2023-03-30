@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.c" />
+    <ClCompile Include="StackList.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Head Files">
+      <UniqueIdentifier>{5c7232f6-8e2b-42a3-9620-fa72cd81f7cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StackList.h">
+      <Filter>Head Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
