@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d0132c49-8ca9-4172-ae59-3cd2a5a655d4}</ProjectGuid>
-    <RootNamespace>AulaGrafos1</RootNamespace>
+    <ProjectGuid>{6ef87844-e017-497b-8aec-0d7339bf3f63}</ProjectGuid>
+    <RootNamespace>AulaBasicaGrafosLA</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Dados.h" />
     <ClInclude Include="Grafo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Grafo.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Veiculos.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,16 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dados.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Grafo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Grafo.c">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="Veiculos.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.c">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grafo.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
