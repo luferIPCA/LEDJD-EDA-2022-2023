@@ -1,4 +1,1 @@
-﻿  Programa.c
-D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 2 - Apontadores\Programa.c(35,8): warning C4013: 'getche' undefined; assuming extern returning int
-D:\Temp\EDA-EDJD\CodigoAulasEDA\Aula 2 - Apontadores\Programa.c(99,8): warning C4013: 'strcpy' undefined; assuming extern returning int
-  Aula 2 - Apontadores.vcxproj -> D:\Temp\EDA-EDJD\x64\Debug\Aula 2 - Apontadores.exe
+﻿

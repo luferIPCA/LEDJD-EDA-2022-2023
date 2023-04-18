@@ -1,6 +1,1 @@
-﻿  GereDadosc.c
-  ReadCSV.c
-D:\Temp\EDA-EDJD\CodigoAulasEDA\Consolidação\Ficheiros\Ficheiros - CSV\ReadCSV.c(41,13): warning C4013: 'exit' undefined; assuming extern returning int
-D:\Temp\EDA-EDJD\CodigoAulasEDA\Consolidação\Ficheiros\Ficheiros - CSV\ReadCSV.c(64,32): warning C4013: 'atof' undefined; assuming extern returning int
-  Generating Code...
-  Ficheiros - CSV.vcxproj -> D:\Temp\EDA-EDJD\CodigoAulasEDA\Consolidação\Ficheiros\Ficheiros - CSV\Debug\Ficheiros - CSV.exe
+﻿
