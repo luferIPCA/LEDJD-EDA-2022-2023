@@ -4,7 +4,7 @@
 *
 * Grafos Não Orientados | Orientados
 *
-* Procura em Profundidade: Stack
+* Procura em Profundidade:	Stack
 * Procura em Largura:		Queue
 * Consultar:
 * https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
@@ -29,23 +29,25 @@ typedef struct Vertice {
 //
 //"Lista" de vértices 
 Vertice* lstVertices[MAX];
-//
-//Matriz de adjacências
-int adjMatrix[MAX][MAX];
-//
 
-//auxiliar
+
+//auxiliar: ATENÇÃO: passar para variável locale parâmetro!!!
 int vertCount;
 
+//Matriz de Adjacências
 bool InitAdj(int m[][MAX], int tot);
-void AddEdge(int start, int end);
-void AddEdgeWeight(int start, int end, int peso);
+void AddEdge(int m[][MAX], int start, int end);
+//Pesos são "int"
+void AddEdgeWeight(int m[][MAX], int start, int end, int peso);
+
+
+//Vertices
 //int AddVertice(char label, int c);
 bool AddVertice(Vertice* gr[], char label, int *count);
 //void ProcessaVertice(int vertIndex);
 void ProcessaVertice(Vertice *lstVertices[], int vertIndex);
 //int GetVertAdjunNaoVisitado(int vertIndex);
-int GetVertAdjunNaoVisitado(Vertice *lstVertices[], int vertIndex);
+int GetVertAdjunNaoVisitado(int m[][MAX], Vertice *lstVertices[], int vertIndex);
 
 #endif // 
 

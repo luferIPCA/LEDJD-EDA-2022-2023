@@ -25,7 +25,7 @@ typedef struct item {
 
 bool CriaGraph(ITEM *gr, int tot);
 void MostraGrafo(ITEM *lista);
-void InsereAresta(ITEM *lista, int a, int b);
+bool InsereAresta(ITEM *lista, int a, int b);
 
 
 
@@ -52,16 +52,16 @@ struct AdjList
 struct Graph
 {
 	int v;				//total de vertices
-	struct AdjList* array;	//lista de adjacencias
+	struct AdjList* array;	//"lista" de adjacencias
 };
 
 //prototipos funções
 
 struct Graph* createGraph(int nVertices);
 //Insere em grafo não orientado e pesado
-void addEdgeWeight(struct Graph* graph, int src, int dest, float p);
+bool addEdgeWeight(struct Graph* graph, int src, int dest, float p);
 //insere em grafo não orientado e não pesado
-void addEdge(struct Graph* graph, int src, int dest);
+bool addEdge(struct Graph* graph, int src, int dest);
 //Menor Distância
 float ShorterDistance(struct Graph* graph, int v);
 

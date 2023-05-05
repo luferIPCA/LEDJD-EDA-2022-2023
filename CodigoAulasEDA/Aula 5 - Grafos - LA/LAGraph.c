@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include "LAGraph.h"
 #include "assert.h"
+#include <stdlib.h>	//malloc
 // Lidar com "exceções"
 // assert(x>=10) - stderror output caso x<10
 
@@ -46,7 +47,7 @@ void MostraGrafo(ITEM *lista) {
 		tmp = lista[i].prox;
 		printf("Vertice %d: (%d) ==>", i, lista[i].valor);
 		while (tmp != NULL) {
-			printf("%d  ", tmp->valor);
+			printf("Adjacente: %d  ", tmp->valor);
 			tmp = tmp->prox;
 		}
 		printf("\n");
@@ -58,12 +59,13 @@ Nova aresta, ordenando adjacências, grafo orientado
 Vertice origem:a
 Vertice destino:b
 */
-void InsereAresta(ITEM *lista, int a, int b) {
+bool InsereAresta(ITEM *lista, int a, int b) {
 	ITEM *destino;
 	ITEM *tmp;
 
 	//Novo vertice para o destino
-	destino = (ITEM*)malloc((int)sizeof(ITEM));
+	destino = (ITEM*)malloc(sizeof(ITEM));
+	if (destino == NULL) return false;
 	//assert(destion)
 	destino->valor = b;
 	destino->prox = NULL;
@@ -91,6 +93,7 @@ void InsereAresta(ITEM *lista, int a, int b) {
 			tmp->prox = destino;
 		}
 	}
+	return true;
 }
 
 //=========================================================
@@ -134,28 +137,32 @@ struct Graph* createGraph(int nVertices)
 /*
 Adiciona aresta em grafo não orientado e não pesado
 */
-void addEdge(struct Graph* graph, int src, int dest)
+bool addEdge(struct Graph* graph, int src, int dest)
 {
 	//novo nodo para vertice destino
 	struct AdjListNode* newNode = newAdjListNode(dest);
+	if (newNode == NULL) return false;
 	//Insere à cabeça da lista de adjacências
 	newNode->next = graph->array[src].head;
 	graph->array[src].head = newNode;
 
 	// grafo não orientado => addEdgs (graph, dest,src) 
 	newNode = newAdjListNode(src);
+	if (newNode == NULL) return false;
 	newNode->next = graph->array[dest].head;
 	graph->array[dest].head = newNode;
+	return true;
 }
 
 
 /*
 Insere aresta ponderada, ie, com um peso, em grafo não orientado
 */
-void addEdgeWeight(struct Graph* graph, int src, int dest, float p)
+bool addEdgeWeight(struct Graph* graph, int src, int dest, float p)
 {
 	//novo nodo para vertice destino
-	struct AdjListNode* vdest = newAdjListNode(dest);	
+	struct AdjListNode* vdest = newAdjListNode(dest);
+	if (vdest == NULL) return false;
 	vdest->peso = p;		//ponderação
 
 	//Insere à cabeça da lista de adjacências
@@ -164,12 +171,15 @@ void addEdgeWeight(struct Graph* graph, int src, int dest, float p)
 
 	// grafo não orientado => addEdgs (graph, dest,src) 
 	struct AdjListNode* vsource = newAdjListNode(src);
+	if (vsource == NULL) return false;
 	vsource->peso = p;		//ponderação
 	vsource->next = graph->array[dest].head;
 	graph->array[dest].head = vsource;
+
+	return true;
 }
 
-//Outra Abordagem
+//Outra Abordagem: Recursiva
 /*
 void addEdgeII(struct Graph* graph, int src, int dest, float p)
 {
@@ -180,6 +190,7 @@ newNode->next = graph->array[src].head;
 newNode->peso = p;
 graph->array[src].head = newNode;
 
+//Chamada Recursiva
 addEdgeII(graph, dest, src, p);
 
 }
@@ -234,7 +245,7 @@ void printGraphWeight(struct Graph* graph, bool pesado)
 }
 
 /*
-Menor distância saindo de um determinado verticce
+Menor distância saindo de um determinado vertice
 */
 float ShorterDistance(struct Graph* graph, int v) {
 	float menor = 0;
@@ -313,29 +324,29 @@ void NodeDestroy(Node *ptNode) {
 
 void CreateGraphTable(Node *graph, int position, char cityName[])
 {
-	Node Previous = NULL;
-	Node Inserted = NULL;
-	Node Current = *graph;
+	Node previous = NULL;
+	Node inserted = NULL;
+	Node current = *graph;
 
-	if ((Inserted = NodeCreate(position, cityName)) == NULL)
+	if ((inserted = NodeCreate(position, cityName)) == NULL)
 	{
 		return;
 	}
 
-	while (Current != NULL)
+	while (current != NULL)
 	{
-		Previous = Current;
-		Current = Current->PtNext;
+		previous = current;
+		current = current->PtNext;
 	}
 
-	if (Previous == NULL)
+	if (previous == NULL)	//no inicio
 	{
-		Inserted->PtNext = *graph;
-		*graph = Inserted;
+		inserted->PtNext = *graph;
+		*graph = inserted;
 	}
-	else
+	else // no fim
 	{
-		Previous->PtNext = Inserted;
+		previous->PtNext = inserted;
 	}
 }
 

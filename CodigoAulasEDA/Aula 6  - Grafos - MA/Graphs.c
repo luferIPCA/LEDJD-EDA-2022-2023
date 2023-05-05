@@ -8,6 +8,7 @@ https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 #include <stdio.h>
 #include <stdbool.h>
 #include <locale.h>	// ASCII SET
+#include <stdlib.h>
 #include "Graphs.h"
 
 //======================================================
@@ -15,7 +16,7 @@ https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 //======================================================
 
 /*
-INicializa a matriz de adjacências
+Inicializa a matriz de adjacências
 */
 bool InitAdj(int m[][MAX], int tot) {
 	if (tot <= 0 || tot > MAX) return false;
@@ -43,13 +44,13 @@ bool AddVertice(Vertice* gr[], char label, int *count) {
 /*
 Adicionar aresta ao conjunto de arestas. Grafo não orientado!
 */
-void AddEdge(int start, int end) {
+void AddEdge(int adjMatrix[][MAX],int start, int end) {
 	//testes...
 	adjMatrix[start][end] = 1;
 	adjMatrix[end][start] = 1;
 }
 
-void AddEdgeWeight(int start, int end, int peso) {
+void AddEdgeWeight(int adjMatrix[][MAX], int start, int end, int peso) {
 	//testes...
 	adjMatrix[start][end] = peso;
 	adjMatrix[end][start] = peso;
@@ -61,7 +62,7 @@ void ProcessaVertice(Vertice *lstVertices[], int vertIndex) {
 }
 
 //get the adjacent unvisited vertex 
-int GetVertAdjunNaoVisitado(Vertice *lstVertices[], int vertIndex) {
+int GetVertAdjunNaoVisitado(int adjMatrix[][MAX], Vertice *lstVertices[], int vertIndex) {
 	int i;
 
 	for (i = 0; i<vertCount; i++) {

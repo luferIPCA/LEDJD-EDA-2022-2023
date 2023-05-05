@@ -10,11 +10,11 @@ https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 #include "LAGraph.h"
  
 
-//Grafo
-ITEM lista[TOTALVERTICES + 1];
-
 int main() {
 	setlocale(LC_ALL, "Portuguese");
+
+	//Grafo
+	ITEM lista[TOTALVERTICES + 1];
 
 #pragma region LISTA_ADJACENCIAS
 	  //==========================
@@ -24,7 +24,7 @@ int main() {
 	  //======================================
 	  //H1 - Estrutura de Vértices Fixa
 	  //======================================
-	  int i, a, b;
+	  int i,  b;
 
 	  // Inicialização da lista de vertices
 	  // Vertices: 0, 1, 2, 3...
@@ -37,11 +37,11 @@ int main() {
 
 	  MostraGrafo(lista);
 
-	  InsereAresta(lista, 7, 1);
-	  InsereAresta(lista, 0, 1);
-	  InsereAresta(lista, 0, 2);
-	  InsereAresta(lista, 2, 3);
-	  InsereAresta(lista, 3, 1);
+	  bool a = InsereAresta(lista, 7, 1);
+	  a=InsereAresta(lista, 0, 1);
+	  a=InsereAresta(lista, 0, 2);
+	  a=InsereAresta(lista, 2, 3);
+	  a=InsereAresta(lista, 3, 1);
 
 	  printf("\nGrafo Orientado\n");
 	  MostraGrafo(lista);
@@ -52,13 +52,13 @@ int main() {
 	  
 	  int v = 5;
 	  struct Graph* g = createGraph(v);
-	  addEdge(g, 0, 1);	//sem peso
-	  addEdge(g, 0, 4);
-	  addEdge(g, 1, 2);
-	  addEdge(g, 1, 3);
-	  addEdge(g, 1, 4);
-	  addEdgeWeight(g, 2, 3,4.2);
-	  addEdgeWeight(g, 3, 4, (float)7);
+	  a = addEdge(g, 0, 1);	//sem peso
+	  a = addEdge(g, 0, 4);
+	  a = addEdge(g, 1, 2);
+	  a = addEdge(g, 1, 3);
+	  a = addEdge(g, 1, 4);
+	  a = addEdgeWeight(g, 2, 3,4.2);
+	  a = addEdgeWeight(g, 3, 4, (float)7);
 
 	  //Mostra Grafo
 	  printf("\nGrafo Não Orientado\n");

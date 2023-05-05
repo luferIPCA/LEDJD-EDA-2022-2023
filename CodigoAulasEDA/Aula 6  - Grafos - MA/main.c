@@ -18,6 +18,11 @@ int main() {
 	bool aux;
 	vertCount = 0;
 
+	//
+	//Matriz de adjacências
+	int adjMatrix[MAX][MAX];
+	//
+
 	aux = InitAdj(adjMatrix, MAX);
     
 	//Constroi grafo
@@ -35,28 +40,40 @@ int main() {
 	//AddEdge(2, 4, 7);    // B - D 
 	//AddEdge(3, 4, 1);    // C - D 
 
-	AddEdgeWeight(0, 1, 8);    // S - A 
-	AddEdgeWeight(0, 2, 12);    // S - B 
-	AddEdgeWeight(0, 3, 9);    // S - C 
-	AddEdgeWeight(1, 4, 3);    // A - D 
-	AddEdgeWeight(2, 4, 7);    // B - D 
-	AddEdgeWeight(3, 4, 1);    // C - D 
-	AddEdgeWeight(3, 5, 2);    // C - E 
+	//Define Grafo com MA
+
+	AddEdgeWeight(adjMatrix,0, 1, 8);    // S - A 
+	AddEdgeWeight(adjMatrix, 0, 2, 12);    // S - B 
+	AddEdgeWeight(adjMatrix, 0, 3, 9);    // S - C 
+	AddEdgeWeight(adjMatrix, 1, 4, 3);    // A - D 
+	AddEdgeWeight(adjMatrix, 2, 4, 7);    // B - D 
+	AddEdgeWeight(adjMatrix, 3, 4, 1);    // C - D 
+	AddEdgeWeight(adjMatrix, 3, 5, 2);    // C - E 
    
 	//Mostra um determinado vertice
 	ProcessaVertice(lstVertices,3);
 
 	printf("\nTravessia Depth First:\n");    
-	depthFirstSearch(lstVertices);
+	DFT(adjMatrix, lstVertices, vertCount);
+
+	printf("\nTravessia Depth First Recursiva:\n");
+	DFTRecursivo(adjMatrix, lstVertices, vertCount, 0);
+
+	// reset de vertices visitados
+	for (int i = 0; i < vertCount; i++) 
+		lstVertices[i]->visitado = false;
+
+	printf("\nPesquisa com Depth First Recursiva:\n");
+	bool existe = DepthFirstSearchRec(adjMatrix, lstVertices, vertCount, 0,4);
+	printf(" Existe Path entre %d e %d: %s\n", 0,4,(existe == true ? "Sim" : "Não"));
 
 	printf("\nTravessia Breadth First:\n");
-	breadthFirstSearch(lstVertices, 0);  
+	BFT(adjMatrix, lstVertices, 0);
 
-	Best b = bestPath(adjMatrix, MAX, 0);
+	Best b = BestPath(adjMatrix, MAX, 0);
 	
 	ShowAllPath(b, MAX, 0);
 
-	printf("\n");
 	system("pause");
 	return 0;
 } 

@@ -1,1 +1,15 @@
-﻿
+﻿  LAGraph.c
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\LAGraph.c(305,43): warning C4013: 'strlen' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\LAGraph.c(312,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+  main.c
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(60,33): warning C4305: 'function': truncation from 'double' to 'float'
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(65,14): warning C4013: 'printGraph' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(68,20): warning C4013: 'printGraphWeight' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(80,20): warning C4013: 'CreateGraphTable' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(86,18): warning C4013: 'CreateAdjacent' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(105,13): warning C4013: 'ListGraph' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(109,10): warning C4013: 'system' undefined; assuming extern returning int
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(27,12): warning C4101: 'b': unreferenced local variable
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 5 - Grafos - LA\main.c(27,8): warning C4101: 'i': unreferenced local variable
+  Generating Code...
+  Aula 5 - Grafos - LA.vcxproj -> D:\Temp\LESI-EDA-2022-2023\x64\Debug\Aula 5 - Grafos - LA.exe

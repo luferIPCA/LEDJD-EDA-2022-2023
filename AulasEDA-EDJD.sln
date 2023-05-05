@@ -47,6 +47,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Aula Basica - Grafos com MA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Aula Basica - Grafos LA", "CodigoAulasEDA\Aula Basica - Grafos LA\Aula Basica - Grafos LA.vcxproj", "{6EF87844-E017-497B-8AEC-0D7339BF3F63}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Aula 7 - Grafos LA", "CodigoAulasEDA\Aula 7 - Grafos LA\Aula 7 - Grafos LA.vcxproj", "{872CEED7-29F3-46FD-A13A-A992B0117FA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -199,6 +201,14 @@ Global
 		{6EF87844-E017-497B-8AEC-0D7339BF3F63}.Release|x64.Build.0 = Release|x64
 		{6EF87844-E017-497B-8AEC-0D7339BF3F63}.Release|x86.ActiveCfg = Release|Win32
 		{6EF87844-E017-497B-8AEC-0D7339BF3F63}.Release|x86.Build.0 = Release|Win32
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Debug|x64.ActiveCfg = Debug|x64
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Debug|x64.Build.0 = Debug|x64
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Debug|x86.ActiveCfg = Debug|Win32
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Debug|x86.Build.0 = Debug|Win32
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Release|x64.ActiveCfg = Release|x64
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Release|x64.Build.0 = Release|x64
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Release|x86.ActiveCfg = Release|Win32
+		{872CEED7-29F3-46FD-A13A-A992B0117FA5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

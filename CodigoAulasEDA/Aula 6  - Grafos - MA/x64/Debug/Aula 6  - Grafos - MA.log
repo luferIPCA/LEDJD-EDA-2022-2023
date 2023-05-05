@@ -1,1 +1,3 @@
-﻿
+﻿  MAStack.c
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 6  - Grafos - MA\MAStack.c(130): warning C4715: 'DepthFirstSearchRec': not all control paths return a value
+  Aula 6  - Grafos - MA.vcxproj -> D:\Temp\LESI-EDA-2022-2023\x64\Debug\Aula 6  - Grafos - MA.exe

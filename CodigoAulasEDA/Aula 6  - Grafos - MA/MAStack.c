@@ -43,13 +43,15 @@ bool isStackEmpty() {
 
 //======================================================
 //Depth First Algorithm
+//  DFT: Depth First Traversal
+//  DFS: Depth First Search
 //======================================================
 
 /*
-DFS
-Percorre o grafo em profundidade
+DFT
+Percorre todo o grafo em profundidade
 */
-void depthFirstSearch(Vertice *lstVertices[]) {
+void DFT(int adjMatrix[][MAX],Vertice *lstVertices[], int totVertices) {
    int i; 
    int uv; //unvisitedVertice
 
@@ -61,8 +63,8 @@ void depthFirstSearch(Vertice *lstVertices[]) {
    push(0); 
    while(!isStackEmpty()) { 	  
 	  //encontra vertice não visitado adjacente ao que está no topo da stack      
-	  uv = GetVertAdjunNaoVisitado(lstVertices,peek());
-      //se não tem adjacentes 
+	  uv = GetVertAdjunNaoVisitado(adjMatrix,lstVertices,peek());
+      //se não tem adjacentes, retira da stack 
       if(uv == -1) { 
          pop(); 
       }else { 
@@ -75,12 +77,57 @@ void depthFirstSearch(Vertice *lstVertices[]) {
       } 
    } 
  
-   //stack está vazia, repõe o estado de cada vertice         
-   for(i = 0;i < vertCount;i++) { 
+   //no fim a stack está vazia, repõe o estado de cada vertice         
+   for(i = 0;i < totVertices;i++) {
       lstVertices[i]->visitado = false; 
    }         
 }
 
+/**
+ * DFT: Percorre todo o grafo a partir de um determinado vertice
+ */
+void DFTRecursivo(int adjMatrix[][MAX], Vertice* lstVertices[], int totVertices, int origem) {
+    int j;
+
+    lstVertices[origem]->visitado = 1;
+    printf(" Vertice: %c : %d\n", lstVertices[origem]->nome, lstVertices[origem]->visitado);
+
+    for (j = 0; j < totVertices; j++)
+    {
+        if (adjMatrix[origem][j] > 0 && lstVertices[j]->visitado == 0)
+            DFTRecursivo(adjMatrix, lstVertices, totVertices, j);
+    }
+}
+
+/**
+ * @brief Depth First Search.
+ * 
+ * @param adjMatrix
+ * @param lstVertices
+ * @param totVertices
+ * @param origem
+ * @param dest
+ * @return 
+ * @author lufer
+ *
+ */
+bool DepthFirstSearchRec(int adjMatrix[][MAX],  Vertice* lstVertices[], int totVertices,  int origem, int dest)
+{
+    int j;
+    bool existe = false;
+
+    lstVertices[origem]->visitado=1;
+    printf("\tVertice: %c : %d\n", lstVertices[origem]->nome, origem);
+
+    if (origem == dest) return true;
+
+    for (j = 0; j < totVertices; j++)
+    {
+        if (adjMatrix[origem][j] >0 && lstVertices[j]->visitado == 0)
+            return DepthFirstSearchRec(adjMatrix, lstVertices, totVertices, j, dest);
+    }
+    //return existe;
+}
 //==================================================
 /* Exercício
 Grafo Pesado com distâncias entre vértices (cidades)

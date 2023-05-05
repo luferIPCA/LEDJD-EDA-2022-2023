@@ -10,8 +10,8 @@
 
 #include "Graphs.h"
 
-#ifndef BFT
-#define BFT 
+#ifndef BFT1
+#define BFT1 
 
 #define MAXDISTANCE 9999
 
@@ -32,8 +32,8 @@ int nextQueue();
 bool isQueueEmpty();
 
 //graphs functions
-void breadthFirstSearch(Vertice *gr[], int vertice);
-Best bestPath(int adjMatrix[MAX][MAX], int n, int v);
+void BFT(int adjMatrix[][MAX], Vertice *gr[], int vertice);
+Best BestPath(int adjMatrix[MAX][MAX], int n, int v);
 
 //auxiliar
 void ShowAllPath(Best b, int n, int v);
