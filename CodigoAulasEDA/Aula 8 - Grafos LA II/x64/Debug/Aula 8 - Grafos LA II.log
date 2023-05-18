@@ -1,0 +1,9 @@
+﻿  Grafo.c
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 8 - Grafos LA II\Grafo.c(431,6): warning C4101: 'j': unreferenced local variable
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 8 - Grafos LA II\Grafo.c(501,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 8 - Grafos LA II\Grafo.c(483,53): warning C4101: 'j': unreferenced local variable
+D:\Temp\LESI-EDA-2022-2023\CodigoAulasEDA\Aula 8 - Grafos LA II\Grafo.c(678,26): warning C4047: 'return': 'Vertice *' differs in levels of indirection from 'int'
+  Main.c
+  Generating Code...
+  LINK : D:\Temp\LESI-EDA-2022-2023\x64\Debug\Aula 8 - Grafos LA II.exe not found or not built by the last incremental link; performing full link
+  Aula 8 - Grafos LA II.vcxproj -> D:\Temp\LESI-EDA-2022-2023\x64\Debug\Aula 8 - Grafos LA II.exe
