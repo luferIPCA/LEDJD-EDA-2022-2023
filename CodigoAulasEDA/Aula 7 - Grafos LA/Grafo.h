@@ -12,10 +12,16 @@
  * Estrutura de uma Adjacência.
  */
 typedef struct Adj {
-	int cod;		/*!< Código da Adjacência */
+	int cod;		/*!< Código Destino da Adjacência */
 	float dist;		/*!< Peso */
 	struct Adj *next;
 }Adj;
+
+typedef struct AdjFile {
+	int codOrigem;
+	int cod;		/*!< Código Destino da Adjacência */
+	float dist;		/*!< Peso */
+}AdjFile;
 
 /**
  * Descrição de um Vértice do grafo.
@@ -27,6 +33,11 @@ typedef struct Vertice {
 	struct Vertice* next;		/*!< Lista de Vértices */
 	struct Adj* adjacentes;		/*!< Lista de Adjacências */
 } Vertice;
+
+typedef struct VerticeFile {
+	int cod;					/*!< Código do Vértice */
+	char cidade[N];				/*!< Nome da Cidade */
+} VerticeFile;
 
 #pragma region GRAFO
 
@@ -64,6 +75,10 @@ bool DepthFirstSearchRec(Vertice* g, int origem, int dest);
 bool DepthFirstSearchNamesRec(Vertice* g, char* src, char* dest);
 
 Vertice* ResetVerticesVisitados(Vertice* g);
+
+
+int SaveGraph(Vertice* g, char fileName[]);
+int SaveAdj(Adj* h, char* fileName, int codVerticeOrigin);
 
 #pragma endregion
 

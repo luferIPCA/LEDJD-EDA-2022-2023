@@ -1,4 +1,1 @@
-﻿  Grafo.c
-D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 7 - Grafos LA\Grafo.c(331,6): warning C4101: 'j': unreferenced local variable
-D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 7 - Grafos LA\Grafo.c(350): warning C4715: 'DepthFirstSearchRec': not all control paths return a value
-  Aula 7 - Grafos LA.vcxproj -> D:\Temp\LEDJD-EDA-2022-2023\x64\Debug\Aula 7 - Grafos LA.exe
+﻿  Aula 7 - Grafos LA.vcxproj -> D:\Temp\LEDJD-EDA-2022-2023\x64\Debug\Aula 7 - Grafos LA.exe

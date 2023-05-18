@@ -383,4 +383,42 @@ Vertice *ResetVerticesVisitados(Vertice* g) {
 	return g;
 }
 
+/**
+ * @brief .
+ * 
+ * @param g
+ * @param fileName
+ * @return 
+ * @author lufer
+ *
+ */
+int SaveGraph(Vertice* g, char fileName[]) {
+	if (g == NULL) return 0;		//Não existe grafo
+	FILE* fp;
+	fp = fopen(fileName, "wb");
+	if (fp == NULL) return -1;		//ficheiro com problemas!!!
+	
+	Vertice* aux = g;
+	VerticeFile v;
+	while (aux!=NULL)
+	{
+		//copiar de aux para v
+		strcpy(v.cidade, aux->cidade);
+		v.cod = aux->cod;
+		fwrite(&v, 1, sizeof(v), fp);
+		//save Adj de v
+		SaveAdj(aux->adjacentes, strcat("Adj",fileName), v.cod);
+
+
+		aux = aux->next;
+	}
+	fclose(fp);
+	return 1;
+}
+
+
+int SaveAdj(Adj* h, char* fileName, int codVerticeOrigin) {
+	if (h == NULL) return 0;
+
+}
 #pragma endregion
