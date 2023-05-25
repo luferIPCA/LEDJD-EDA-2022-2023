@@ -1,0 +1,12 @@
+﻿  List.c
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\List.c(216,8): warning C4101: 'holdNext': unreferenced local variable
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\List.c(320,9): warning C4129: 'V': unrecognized character escape sequence
+  main.c
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\main.c(30,64): warning C4047: '=': 'Node *' differs in levels of indirection from 'Node **'
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\main.c(33,48): warning C4047: '=': 'Node *' differs in levels of indirection from 'Node **'
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\main.c(72,35): warning C4047: '=': 'Node *' differs in levels of indirection from 'Node **'
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\main.c(75,41): warning C4047: '=': 'Node *' differs in levels of indirection from 'Node **'
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\main.c(85,23): warning C4013: 'malloc' undefined; assuming extern returning int
+D:\Temp\LEDJD-EDA-2022-2023\CodigoAulasEDA\Aula 9 - Hash Tables\main.c(85,48): warning C4047: '=': 'Node **' differs in levels of indirection from 'int'
+  Generating Code...
+  Aula 9 - Hash Tables.vcxproj -> D:\Temp\LEDJD-EDA-2022-2023\x64\Debug\Aula 9 - Hash Tables.exe
